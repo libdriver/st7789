@@ -1,6 +1,6 @@
 /**
  * @mainpage  LibDriver ST7789
- * @brief     libdriver st7789 is a full function driver of st7789 and it can run in both MCU and Linux platform.
+ * @brief     LibDriver ST7789 is a full function driver of ST7789 and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
