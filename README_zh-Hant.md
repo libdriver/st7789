@@ -8,7 +8,7 @@
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/st7789/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
-ST7789是262K彩色圖形型TFT-LCD的單片機控制器/驅動器。 它由720個源極線和320個柵極線驅動電路組成。 該晶片能够直接連接到外部微處理器，並接受8比特/9比特/16比特/18比特平行介面。 顯示數據可以存儲在240x320x18比特的片上顯示數據RAM中。 它可以在沒有外部操作時鐘的情况下執行顯示數據RAM讀/寫操作，以最大限度地减少功耗。 此外，由於集成電源電路是驅動液晶所必需的； 可以製造具有最少部件的顯示系統。
+ST7789是262K彩色圖形型TFT-LCD的單片機控制器/驅動器。 它由720個源極線和320個柵極線驅動電路組成。 該晶片能够直接連接到外部微處理器，並接受8比特/9比特/16比特/18比特平行介面。 顯示數據可以存儲在240x320x18比特的片上顯示數據RAM中。 它可以在沒有外部操作時鐘的情况下執行顯示數據RAM讀/寫操作，以最大限度地减少功耗。 
 
 LibDriver ST7789是LibDriver推出的ST7789的全功能驅動，該驅動提供繪製單點，填充塊，圖片顯示等功能並且它符合MISRA標準。
 
