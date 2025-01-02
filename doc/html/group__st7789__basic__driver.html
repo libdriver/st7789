@@ -643,7 +643,7 @@ Functions</h2></td></tr>
 <p>clear the display </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -680,7 +680,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -719,7 +719,7 @@ Functions</h2></td></tr>
 <p>display inversion off </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -755,7 +755,7 @@ Functions</h2></td></tr>
 <p>display inversion on </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -791,7 +791,7 @@ Functions</h2></td></tr>
 <p>display off </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -827,7 +827,7 @@ Functions</h2></td></tr>
 <p>display on </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -897,12 +897,12 @@ Functions</h2></td></tr>
 <p>draw a picture </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>is the left coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>is the top coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>is the right coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>is the bottom coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*image</td><td>points to an image buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>left coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>top coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>right coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>bottom coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*image</td><td>pointer to an image buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -978,12 +978,12 @@ Functions</h2></td></tr>
 <p>draw a picture </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>is the left coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>is the top coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>is the right coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>is the bottom coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*image</td><td>points to an image buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>left coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>top coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>right coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>bottom coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*image</td><td>pointer to an image buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1059,12 +1059,12 @@ Functions</h2></td></tr>
 <p>draw a picture </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>is the left coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>is the top coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>is the right coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>is the bottom coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*image</td><td>points to an image buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>left coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>top coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>right coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>bottom coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*image</td><td>pointer to an image buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1128,10 +1128,10 @@ Functions</h2></td></tr>
 <p>draw a point in the display </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>is the coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>is the coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>is the point color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>point color </td></tr>
   </table>
   </dd>
 </dl>
@@ -1203,12 +1203,12 @@ Functions</h2></td></tr>
 <p>fill the rect </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>is the left coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>is the top coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>is the right coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>is the bottom coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>is the display color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>left coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>top coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">right</td><td>right coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bottom</td><td>bottom coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>display color </td></tr>
   </table>
   </dd>
 </dl>
@@ -1250,7 +1250,7 @@ Functions</h2></td></tr>
 <p>idle mode off </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1286,7 +1286,7 @@ Functions</h2></td></tr>
 <p>idle mode on </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1322,7 +1322,7 @@ Functions</h2></td></tr>
 <p>get chip's information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to an st7789 info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to an st7789 info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1356,7 +1356,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1410,9 +1410,9 @@ Functions</h2></td></tr>
 <p>memory continue write </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the data length </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length </td></tr>
   </table>
   </dd>
 </dl>
@@ -1464,9 +1464,9 @@ Functions</h2></td></tr>
 <p>memory write </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the data length </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>data length </td></tr>
   </table>
   </dd>
 </dl>
@@ -1502,7 +1502,7 @@ Functions</h2></td></tr>
 <p>nop </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1538,7 +1538,7 @@ Functions</h2></td></tr>
 <p>normal display mode on </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1574,7 +1574,7 @@ Functions</h2></td></tr>
 <p>partial display mode on </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1632,10 +1632,10 @@ Functions</h2></td></tr>
 <p>set brightness control and color enhancement </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">color_enhancement</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the color enhancement mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>is the color enhancement level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color_enhancement</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>color enhancement mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>color enhancement level </td></tr>
   </table>
   </dd>
 </dl>
@@ -1681,8 +1681,8 @@ Functions</h2></td></tr>
 <p>set cabc minimum brightness </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">brightness</td><td>is the display brightness </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">brightness</td><td>display brightness </td></tr>
   </table>
   </dd>
 </dl>
@@ -1728,8 +1728,8 @@ Functions</h2></td></tr>
 <p>set column </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">column</td><td>is the screen column </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">column</td><td>screen column </td></tr>
   </table>
   </dd>
 </dl>
@@ -1781,9 +1781,9 @@ Functions</h2></td></tr>
 <p>set the column address </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_address</td><td>is the start address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">end_address</td><td>is the end address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_address</td><td>start address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_address</td><td>end address </td></tr>
   </table>
   </dd>
 </dl>
@@ -1831,8 +1831,8 @@ Functions</h2></td></tr>
 <p>set display brightness </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">brightness</td><td>is the display brightness </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">brightness</td><td>display brightness </td></tr>
   </table>
   </dd>
 </dl>
@@ -1890,10 +1890,10 @@ Functions</h2></td></tr>
 <p>set display control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">brightness_control_block</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">display_dimming</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">backlight_control</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">brightness_control_block</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">display_dimming</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">backlight_control</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1939,8 +1939,8 @@ Functions</h2></td></tr>
 <p>set gamma </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gamma</td><td>is the set gamma </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gamma</td><td>set gamma </td></tr>
   </table>
   </dd>
 </dl>
@@ -1992,9 +1992,9 @@ Functions</h2></td></tr>
 <p>set interface pixel format </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rgb</td><td>is the rgb interface color format </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>is control interface color format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rgb</td><td>rgb interface color format </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">control</td><td>control interface color format </td></tr>
   </table>
   </dd>
 </dl>
@@ -2040,8 +2040,8 @@ Functions</h2></td></tr>
 <p>set memory data access control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">order</td><td>is the memory data access control order </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">order</td><td>memory data access control order </td></tr>
   </table>
   </dd>
 </dl>
@@ -2093,9 +2093,9 @@ Functions</h2></td></tr>
 <p>set partial areas </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_row</td><td>is the start row </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">end_row</td><td>is the end row </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_row</td><td>start row </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_row</td><td>end row </td></tr>
   </table>
   </dd>
 </dl>
@@ -2141,8 +2141,8 @@ Functions</h2></td></tr>
 <p>set row </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>is the screen row </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">row</td><td>screen row </td></tr>
   </table>
   </dd>
 </dl>
@@ -2194,9 +2194,9 @@ Functions</h2></td></tr>
 <p>set the row address </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_address</td><td>is the start address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">end_address</td><td>is the end address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_address</td><td>start address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">end_address</td><td>end address </td></tr>
   </table>
   </dd>
 </dl>
@@ -2244,8 +2244,8 @@ Functions</h2></td></tr>
 <p>set tear scanline </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>is the tear line </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>tear line </td></tr>
   </table>
   </dd>
 </dl>
@@ -2291,8 +2291,8 @@ Functions</h2></td></tr>
 <p>set the vertical scroll start address </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_address</td><td>is the start address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_address</td><td>start address </td></tr>
   </table>
   </dd>
 </dl>
@@ -2351,10 +2351,10 @@ Functions</h2></td></tr>
 <p>set vertical scrolling </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">top_fixed_area</td><td>is top fixed area line </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">scrolling_area</td><td>is scrolling area line </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bottom_fixed_area</td><td>is bottom fixed area line </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top_fixed_area</td><td>top fixed area line </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scrolling_area</td><td>scrolling area line </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bottom_fixed_area</td><td>bottom fixed area line </td></tr>
   </table>
   </dd>
 </dl>
@@ -2390,7 +2390,7 @@ Functions</h2></td></tr>
 <p>sleep in </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2426,7 +2426,7 @@ Functions</h2></td></tr>
 <p>sleep out </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2462,7 +2462,7 @@ Functions</h2></td></tr>
 <p>software reset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2498,7 +2498,7 @@ Functions</h2></td></tr>
 <p>tearing effect line off </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2544,8 +2544,8 @@ Functions</h2></td></tr>
 <p>tearing effect line on </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">effect</td><td>is the tearing effect </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">effect</td><td>tearing effect </td></tr>
   </table>
   </dd>
 </dl>
@@ -2621,13 +2621,13 @@ Functions</h2></td></tr>
 <p>write a string in the display </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>is the coordinate x </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>is the coordinate y </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*str</td><td>points to a write string address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>is the length of the string </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>is the display color </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>is the string font </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>coordinate x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>coordinate y </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*str</td><td>pointer to a write string address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>length of the string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">color</td><td>display color </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">font</td><td>string font </td></tr>
   </table>
   </dd>
 </dl>
