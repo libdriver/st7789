@@ -125,9 +125,9 @@
 
 /**
  * @brief     write one byte
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] data is the write data
- * @param[in] cmd is the data type
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] data written data
+ * @param[in] cmd data type
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -153,10 +153,10 @@ static uint8_t a_st7789_write_byte(st7789_handle_t *handle, uint8_t data, uint8_
 
 /**
  * @brief     write bytes
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
- * @param[in] cmd is the data type
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len data length
+ * @param[in] cmd data type
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -182,7 +182,7 @@ static uint8_t a_st7789_write_bytes(st7789_handle_t *handle, uint8_t *data, uint
 
 /**
  * @brief     nop
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 nop failed
@@ -213,7 +213,7 @@ uint8_t st7789_nop(st7789_handle_t *handle)
 
 /**
  * @brief     software reset
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 software reset failed
@@ -245,7 +245,7 @@ uint8_t st7789_software_reset(st7789_handle_t *handle)
 
 /**
  * @brief     sleep in
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 sleep in failed
@@ -276,7 +276,7 @@ uint8_t st7789_sleep_in(st7789_handle_t *handle)
 
 /**
  * @brief     sleep out
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 sleep out failed
@@ -308,7 +308,7 @@ uint8_t st7789_sleep_out(st7789_handle_t *handle)
 
 /**
  * @brief     partial display mode on
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 partial display mode on failed
@@ -339,7 +339,7 @@ uint8_t st7789_partial_display_mode_on(st7789_handle_t *handle)
 
 /**
  * @brief     normal display mode on
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 normal display mode on failed
@@ -370,7 +370,7 @@ uint8_t st7789_normal_display_mode_on(st7789_handle_t *handle)
 
 /**
  * @brief     display inversion off
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 display inversion off failed
@@ -401,7 +401,7 @@ uint8_t st7789_display_inversion_off(st7789_handle_t *handle)
 
 /**
  * @brief     display inversion on
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 display inversion on failed
@@ -432,8 +432,8 @@ uint8_t st7789_display_inversion_on(st7789_handle_t *handle)
 
 /**
  * @brief     set gamma
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] gamma is the set gamma
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] gamma set gamma
  * @return    status code
  *            - 0 success
  *            - 1 set gamma failed
@@ -470,7 +470,7 @@ uint8_t st7789_set_gamma(st7789_handle_t *handle, uint8_t gamma)
 
 /**
  * @brief     display off
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 display off failed
@@ -501,7 +501,7 @@ uint8_t st7789_display_off(st7789_handle_t *handle)
 
 /**
  * @brief     display on
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 display on failed
@@ -532,9 +532,9 @@ uint8_t st7789_display_on(st7789_handle_t *handle)
 
 /**
  * @brief     set the column address
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] start_address is the start address
- * @param[in] end_address is the end address
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] start_address start address
+ * @param[in] end_address end address
  * @return    status code
  *            - 0 success
  *            - 1 set column address failed
@@ -591,9 +591,9 @@ uint8_t st7789_set_column_address(st7789_handle_t *handle, uint16_t start_addres
 
 /**
  * @brief     set the row address
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] start_address is the start address
- * @param[in] end_address is the end address
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] start_address start address
+ * @param[in] end_address end address
  * @return    status code
  *            - 0 success
  *            - 1 set row address failed
@@ -650,9 +650,9 @@ uint8_t st7789_set_row_address(st7789_handle_t *handle, uint16_t start_address, 
 
 /**
  * @brief     memory write
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 memory write failed
@@ -689,9 +689,9 @@ uint8_t st7789_memory_write(st7789_handle_t *handle, uint8_t *data, uint16_t len
 
 /**
  * @brief     set partial areas
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] start_row is the start row
- * @param[in] end_row is the end row
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] start_row start row
+ * @param[in] end_row end row
  * @return    status code
  *            - 0 success
  *            - 1 set partial areas failed
@@ -734,10 +734,10 @@ uint8_t st7789_set_partial_areas(st7789_handle_t *handle, uint16_t start_row, ui
 
 /**
  * @brief     set vertical scrolling
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] top_fixed_area is top fixed area line
- * @param[in] scrolling_area is scrolling area line
- * @param[in] bottom_fixed_area is bottom fixed area line
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] top_fixed_area top fixed area line
+ * @param[in] scrolling_area scrolling area line
+ * @param[in] bottom_fixed_area bottom fixed area line
  * @return    status code
  *            - 0 success
  *            - 1 set vertical scrolling failed
@@ -783,7 +783,7 @@ uint8_t st7789_set_vertical_scrolling(st7789_handle_t *handle, uint16_t top_fixe
 
 /**
  * @brief     tearing effect line off
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 tearing effect line off failed
@@ -814,8 +814,8 @@ uint8_t st7789_tearing_effect_line_off(st7789_handle_t *handle)
 
 /**
  * @brief     tearing effect line on
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] effect is the tearing effect
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] effect tearing effect
  * @return    status code
  *            - 0 success
  *            - 1 tearing effect line on failed
@@ -852,8 +852,8 @@ uint8_t st7789_tearing_effect_line_on(st7789_handle_t *handle, st7789_tearing_ef
 
 /**
  * @brief     set memory data access control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] order is the memory data access control order
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] order memory data access control order
  * @return    status code
  *            - 0 success
  *            - 1 set memory data access control failed
@@ -890,8 +890,8 @@ uint8_t st7789_set_memory_data_access_control(st7789_handle_t *handle, uint8_t o
 
 /**
  * @brief     set the vertical scroll start address
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] start_address is the start address
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] start_address start address
  * @return    status code
  *            - 0 success
  *            - 1 set vertical scroll start address failed
@@ -939,7 +939,7 @@ uint8_t st7789_set_vertical_scroll_start_address(st7789_handle_t *handle, uint16
 
 /**
  * @brief     idle mode off
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 idle mode off failed
@@ -970,7 +970,7 @@ uint8_t st7789_idle_mode_off(st7789_handle_t *handle)
 
 /**
  * @brief     idle mode on
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 idle mode on failed
@@ -1001,9 +1001,9 @@ uint8_t st7789_idle_mode_on(st7789_handle_t *handle)
 
 /**
  * @brief     set interface pixel format
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] rgb is the rgb interface color format
- * @param[in] control is control interface color format
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] rgb rgb interface color format
+ * @param[in] control control interface color format
  * @return    status code
  *            - 0 success
  *            - 1 set interface pixel format failed
@@ -1046,9 +1046,9 @@ uint8_t st7789_set_interface_pixel_format(st7789_handle_t *handle, st7789_rgb_in
 
 /**
  * @brief     memory continue write
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] *data points to a data buffer
- * @param[in] len is the data length
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] *data pointer to a data buffer
+ * @param[in] len data length
  * @return    status code
  *            - 0 success
  *            - 1 memory continue write failed
@@ -1085,8 +1085,8 @@ uint8_t st7789_memory_continue_write(st7789_handle_t *handle, uint8_t *data, uin
 
 /**
  * @brief     set tear scanline
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] l is the tear line
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] l tear line
  * @return    status code
  *            - 0 success
  *            - 1 set tear scanline failed
@@ -1127,8 +1127,8 @@ uint8_t st7789_set_tear_scanline(st7789_handle_t *handle, uint16_t l)
 
 /**
  * @brief     set display brightness
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] brightness is the display brightness
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] brightness display brightness
  * @return    status code
  *            - 0 success
  *            - 1 set display brightness failed
@@ -1166,10 +1166,10 @@ uint8_t st7789_set_display_brightness(st7789_handle_t *handle, uint8_t brightnes
 
 /**
  * @brief     set display control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] brightness_control_block is a bool value
- * @param[in] display_dimming is a bool value
- * @param[in] backlight_control is a bool value
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] brightness_control_block bool value
+ * @param[in] display_dimming bool value
+ * @param[in] backlight_control bool value
  * @return    status code
  *            - 0 success
  *            - 1 set display control failed
@@ -1212,10 +1212,10 @@ uint8_t st7789_set_display_control(st7789_handle_t *handle, st7789_bool_t bright
 
 /**
  * @brief     set brightness control and color enhancement
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] color_enhancement is a bool value
- * @param[in] mode is the color enhancement mode
- * @param[in] level is the color enhancement level
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] color_enhancement bool value
+ * @param[in] mode color enhancement mode
+ * @param[in] level color enhancement level
  * @return    status code
  *            - 0 success
  *            - 1 set brightness control and color enhancement failed
@@ -1257,8 +1257,8 @@ uint8_t st7789_set_brightness_control_and_color_enhancement(st7789_handle_t *han
 
 /**
  * @brief     set cabc minimum brightness
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] brightness is the display brightness
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] brightness display brightness
  * @return    status code
  *            - 0 success
  *            - 1 set cabc minimum brightness failed
@@ -1296,13 +1296,13 @@ uint8_t st7789_set_cabc_minimum_brightness(st7789_handle_t *handle, uint8_t brig
 
 /**
  * @brief     set ram control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] ram_mode is the ram mode
- * @param[in] display_mode is the display mode
- * @param[in] frame_type is the frame type
- * @param[in] data_mode is the data mode
- * @param[in] bus_width is the bus width
- * @param[in] pixel_type is the pixel type
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] ram_mode ram mode
+ * @param[in] display_mode display mode
+ * @param[in] frame_type frame type
+ * @param[in] data_mode data mode
+ * @param[in] bus_width bus width
+ * @param[in] pixel_type pixel type
  * @return    status code
  *            - 0 success
  *            - 1 set ram control failed
@@ -1350,15 +1350,15 @@ uint8_t st7789_set_ram_control(st7789_handle_t *handle,
 
 /**
  * @brief     set rgb interface control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] rgb_mode is the rgb mode
- * @param[in] rgb_if_mode is the rgb if enable mode
- * @param[in] vspl is the vspl active level
- * @param[in] hspl is the hspl active level
- * @param[in] dpl is the dpl active level
- * @param[in] epl is the epl active level
- * @param[in] vbp is the rgb interface vsync back porch setting
- * @param[in] hbp is the rgb interface hsync back porch setting
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] rgb_mode rgb mode
+ * @param[in] rgb_if_mode rgb if enable mode
+ * @param[in] vspl vspl active level
+ * @param[in] hspl hspl active level
+ * @param[in] dpl dpl active level
+ * @param[in] epl epl active level
+ * @param[in] vbp rgb interface vsync back porch setting
+ * @param[in] hbp rgb interface hsync back porch setting
  * @return    status code
  *            - 0 success
  *            - 1 set rgb interface control failed
@@ -1424,14 +1424,14 @@ uint8_t st7789_set_rgb_interface_control(st7789_handle_t *handle,
 
 /**
  * @brief     set porch
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] back_porch_normal is the back porch setting in normal mode
- * @param[in] front_porch_normal is the front porch setting in normal mode
- * @param[in] separate_porch_enable is a bool value
- * @param[in] back_porch_idle is the back porch setting in idle mode
- * @param[in] front_porch_idle is the front porch setting in idle mode
- * @param[in] back_porch_partial is the back porch setting in partial mode
- * @param[in] front_porch_partial is the front porch setting in partial mode
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] back_porch_normal back porch setting in normal mode
+ * @param[in] front_porch_normal front porch setting in normal mode
+ * @param[in] separate_porch_enable bool value
+ * @param[in] back_porch_idle back porch setting in idle mode
+ * @param[in] front_porch_idle front porch setting in idle mode
+ * @param[in] back_porch_partial back porch setting in partial mode
+ * @param[in] front_porch_partial front porch setting in partial mode
  * @return    status code
  *            - 0 success
  *            - 1 set porch failed
@@ -1529,13 +1529,13 @@ uint8_t st7789_set_porch(st7789_handle_t *handle,
 
 /**
  * @brief     set frame rate control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] separate_fr_control is a bool value
- * @param[in] div_control is the frame rate divided control
- * @param[in] idle_mode is the inversion idle mode
- * @param[in] idle_frame_rate is the idle frame rate
- * @param[in] partial_mode is the inversion partial mode
- * @param[in] partial_frame_rate is the partial frame rate
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] separate_fr_control bool value
+ * @param[in] div_control frame rate divided control
+ * @param[in] idle_mode inversion idle mode
+ * @param[in] idle_frame_rate idle frame rate
+ * @param[in] partial_mode inversion partial mode
+ * @param[in] partial_frame_rate partial frame rate
  * @return    status code
  *            - 0 success
  *            - 1 set frame rate control failed
@@ -1598,10 +1598,10 @@ uint8_t st7789_set_frame_rate_control(st7789_handle_t *handle,
 
 /**
  * @brief     set partial mode control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] level is the non-display source output level
- * @param[in] mode is the non-display area scan mode
- * @param[in] frequency is the non-display frame frequency
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] level non-display source output level
+ * @param[in] mode non-display area scan mode
+ * @param[in] frequency non-display frame frequency
  * @return    status code
  *            - 0 success
  *            - 1 set partial mode control failed
@@ -1644,9 +1644,9 @@ uint8_t st7789_set_partial_mode_control(st7789_handle_t *handle,
 
 /**
  * @brief     set gate control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] vghs is the vghs level
- * @param[in] vgls is the vgls level
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] vghs vghs level
+ * @param[in] vgls vgls level
  * @return    status code
  *            - 0 success
  *            - 1 set gate control failed
@@ -1686,10 +1686,10 @@ uint8_t st7789_set_gate_control(st7789_handle_t *handle, st7789_vghs_t vghs, st7
 
 /**
  * @brief     set gate on timing adjustment
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] gate_on_timing_adjustment is the gate on timing adjustment
- * @param[in] gate_off_timing_adjustment_rgb is the gate off timing adjustment in rgb interface
- * @param[in] gate_off_timing_adjustment is the gate off timing adjustment
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] gate_on_timing_adjustment gate on timing adjustment
+ * @param[in] gate_off_timing_adjustment_rgb gate off timing adjustment in rgb interface
+ * @param[in] gate_off_timing_adjustment gate off timing adjustment
  * @return    status code
  *            - 0 success
  *            - 1 set gate on timing adjustment failed
@@ -1756,8 +1756,8 @@ uint8_t st7789_set_gate_on_timing_adjustment(st7789_handle_t *handle,
 
 /**
  * @brief     enable or disable digital gamma
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set digital gamma failed
@@ -1797,8 +1797,8 @@ uint8_t st7789_set_digital_gamma(st7789_handle_t *handle, st7789_bool_t enable)
 
 /**
  * @brief     set vcoms
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] vcoms is the vcoms
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] vcoms set vcoms
  * @return    status code
  *            - 0 success
  *            - 1 set vcoms failed
@@ -1845,9 +1845,9 @@ uint8_t st7789_set_vcoms(st7789_handle_t *handle, uint8_t vcoms)
 
 /**
  * @brief      convert the vcom to the register raw data
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  v is the vcom
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  v vcom
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -1872,9 +1872,9 @@ uint8_t st7789_vcom_convert_to_register(st7789_handle_t *handle, float v, uint8_
 
 /**
  * @brief      convert the register raw data to the vcom
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *v points to a vcom buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *v pointer to a vcom buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -1899,14 +1899,14 @@ uint8_t st7789_vcom_convert_to_data(st7789_handle_t *handle, uint8_t reg, float 
 
 /**
  * @brief     set lcm control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] xmy is a bool value
- * @param[in] xbgr is a bool value
- * @param[in] xinv is a bool value
- * @param[in] xmx is a bool value
- * @param[in] xmh is a bool value
- * @param[in] xmv is a bool value
- * @param[in] xgs is a bool value
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] xmy bool value
+ * @param[in] xbgr bool value
+ * @param[in] xinv bool value
+ * @param[in] xmx bool value
+ * @param[in] xmh bool value
+ * @param[in] xmv bool value
+ * @param[in] xgs bool value
  * @return    status code
  *            - 0 success
  *            - 1 set lcm control failed
@@ -1954,8 +1954,8 @@ uint8_t st7789_set_lcm_control(st7789_handle_t *handle,
 
 /**
  * @brief     set id code setting
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] *id points to an id buffer
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] *id pointer to an id buffer
  * @return    status code
  *            - 0 success
  *            - 1 set id code setting failed
@@ -1992,8 +1992,8 @@ uint8_t st7789_set_id_code_setting(st7789_handle_t *handle, uint8_t id[3])
 
 /**
  * @brief     set vdv vrh from
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] from is the vdv and vrh from
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] from vdv and vrh from
  * @return    status code
  *            - 0 success
  *            - 1 set vdv vrh from failed
@@ -2034,8 +2034,8 @@ uint8_t st7789_set_vdv_vrh_from(st7789_handle_t *handle, st7789_vdv_vrh_from_t f
 
 /**
  * @brief     set vrhs
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] vrhs is the set vrhs
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] vrhs set vrhs
  * @return    status code
  *            - 0 success
  *            - 1 set vrhs failed
@@ -2082,9 +2082,9 @@ uint8_t st7789_set_vrhs(st7789_handle_t *handle, uint8_t vrhs)
 
 /**
  * @brief      convert the vrhs to the register raw data
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  v is the vcom
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  v vcom
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2109,9 +2109,9 @@ uint8_t st7789_vrhs_convert_to_register(st7789_handle_t *handle, float v, uint8_
 
 /**
  * @brief      convert the register raw data to the vrhs
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *v points to a vcom buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *v pointer to a vcom buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2136,8 +2136,8 @@ uint8_t st7789_vrhs_convert_to_data(st7789_handle_t *handle, uint8_t reg, float 
 
 /**
  * @brief     set vdv
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] vdv is the set vdv
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] vdv set vdv
  * @return    status code
  *            - 0 success
  *            - 1 set vdv failed
@@ -2184,9 +2184,9 @@ uint8_t st7789_set_vdv(st7789_handle_t *handle, uint8_t vdv)
 
 /**
  * @brief      convert the vdv to the register raw data
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  v is the vcom
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  v vcom
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2211,9 +2211,9 @@ uint8_t st7789_vdv_convert_to_register(st7789_handle_t *handle, float v, uint8_t
 
 /**
  * @brief      convert the register raw data to the vdv
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *v points to a vcom buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *v pointer to a vcom buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2238,8 +2238,8 @@ uint8_t st7789_vdv_convert_to_data(st7789_handle_t *handle, uint8_t reg, float *
 
 /**
  * @brief     set vcoms offset
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] offset is the vcoms offset
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] offset vcoms offset
  * @return    status code
  *            - 0 success
  *            - 1 set vcoms offset failed
@@ -2286,9 +2286,9 @@ uint8_t st7789_set_vcoms_offset(st7789_handle_t *handle, uint8_t offset)
 
 /**
  * @brief      convert the vcoms offset to the register raw data
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  v is the vcoms offset
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  v vcoms offset
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2313,9 +2313,9 @@ uint8_t st7789_vcoms_offset_convert_to_register(st7789_handle_t *handle, float v
 
 /**
  * @brief      convert the register raw data to the vcoms offset
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *v points to a vcoms offset buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *v pointer to a vcoms offset buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2340,9 +2340,9 @@ uint8_t st7789_vcoms_offset_convert_to_data(st7789_handle_t *handle, uint8_t reg
 
 /**
  * @brief     set frame rate
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] selection is the inversion selection
- * @param[in] rate is the frame rate
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] selection inversion selection
+ * @param[in] rate frame rate
  * @return    status code
  *            - 0 success
  *            - 1 set frame rate failed
@@ -2382,11 +2382,11 @@ uint8_t st7789_set_frame_rate(st7789_handle_t *handle, st7789_inversion_selectio
 
 /**
  * @brief     set cabc control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] led_on is a bool value
- * @param[in] led_pwm_init is a bool value
- * @param[in] led_pwm_fix is a bool value
- * @param[in] led_pwm_polarity is a bool value
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] led_on bool value
+ * @param[in] led_pwm_init bool value
+ * @param[in] led_pwm_fix bool value
+ * @param[in] led_pwm_polarity bool value
  * @return    status code
  *            - 0 success
  *            - 1 set cabc control failed
@@ -2431,8 +2431,8 @@ uint8_t st7789_set_cabc_control(st7789_handle_t *handle,
 
 /**
  * @brief     set pwm frequency
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] frequency is the pwm frequency
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] frequency pwm frequency
  * @return    status code
  *            - 0 success
  *            - 1 set pwm frequency failed
@@ -2472,10 +2472,10 @@ uint8_t st7789_set_pwm_frequency(st7789_handle_t *handle, st7789_pwm_frequency_t
 
 /**
  * @brief     set power control 1
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] avdd is the avdd param
- * @param[in] avcl is the avcl param
- * @param[in] vds is the vds param
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] avdd avdd param
+ * @param[in] avcl avcl param
+ * @param[in] vds vds param
  * @return    status code
  *            - 0 success
  *            - 1 set power control 1 failed
@@ -2516,7 +2516,7 @@ uint8_t st7789_set_power_control_1(st7789_handle_t *handle, st7789_avdd_t avdd, 
 
 /**
  * @brief     enable vap van signal output
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 enable vap van signal output failed
@@ -2556,8 +2556,8 @@ uint8_t st7789_enable_vap_van_signal_output(st7789_handle_t *handle)
 
 /**
  * @brief     enable or disable command 2
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set command 2 enable failed
@@ -2600,8 +2600,8 @@ uint8_t st7789_set_command_2_enable(st7789_handle_t *handle, st7789_bool_t enabl
 
 /**
  * @brief     set positive voltage gamma control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] *param points to a param buffer
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] *param pointer to a param buffer
  * @return    status code
  *            - 0 success
  *            - 1 set positive voltage gamma control failed
@@ -2638,8 +2638,8 @@ uint8_t st7789_set_positive_voltage_gamma_control(st7789_handle_t *handle, uint8
 
 /**
  * @brief     set negative voltage gamma control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] *param points to a param buffer
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] *param pointer to a param buffer
  * @return    status code
  *            - 0 success
  *            - 1 set negative voltage gamma control failed
@@ -2676,8 +2676,8 @@ uint8_t st7789_set_negative_voltage_gamma_control(st7789_handle_t *handle, uint8
 
 /**
  * @brief     set red digital gamma look up table
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] *param points to a param buffer
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] *param pointer to a param buffer
  * @return    status code
  *            - 0 success
  *            - 1 set digital gamma look up table red failed
@@ -2714,8 +2714,8 @@ uint8_t st7789_set_digital_gamma_look_up_table_red(st7789_handle_t *handle, uint
 
 /**
  * @brief     set blue digital gamma look up table
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] *param points to a param buffer
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] *param pointer to a param buffer
  * @return    status code
  *            - 0 success
  *            - 1 set digital gamma look up table blue failed
@@ -2752,11 +2752,11 @@ uint8_t st7789_set_digital_gamma_look_up_table_blue(st7789_handle_t *handle, uin
 
 /**
  * @brief     set gate
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] gate_line_number is the gate line number
- * @param[in] first_scan_line_number is the first scan line number
- * @param[in] mode is the gate scan mode
- * @param[in] direction is the gate scan direction
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] gate_line_number gate line number
+ * @param[in] first_scan_line_number first scan line number
+ * @param[in] mode gate scan mode
+ * @param[in] direction gate scan direction
  * @return    status code
  *            - 0 success
  *            - 1 set gate failed
@@ -2817,9 +2817,9 @@ uint8_t st7789_set_gate(st7789_handle_t *handle,
 
 /**
  * @brief      convert the gate line to the register raw data
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  l is the gate line
- * @param[out] *reg points to a register raw buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  l gate line
+ * @param[out] *reg pointer to a register raw buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2844,9 +2844,9 @@ uint8_t st7789_gate_line_convert_to_register(st7789_handle_t *handle, uint16_t l
 
 /**
  * @brief      convert the register raw data to the gate line
- * @param[in]  *handle points to an st7789 handle structure
- * @param[in]  reg is the register raw data
- * @param[out] *l points to a gate line buffer
+ * @param[in]  *handle pointer to an st7789 handle structure
+ * @param[in]  reg register raw data
+ * @param[out] *l pointer to a gate line buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -2871,9 +2871,9 @@ uint8_t st7789_gate_line_convert_to_data(st7789_handle_t *handle, uint8_t reg, u
 
 /**
  * @brief     set spi2 enable
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] date_lane is a bool value
- * @param[in] command_table_2 is a bool value
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] date_lane bool value
+ * @param[in] command_table_2 bool value
  * @return    status code
  *            - 0 success
  *            - 1 set spi2 enable failed
@@ -2913,9 +2913,9 @@ uint8_t st7789_set_spi2_enable(st7789_handle_t *handle, st7789_bool_t date_lane,
 
 /**
  * @brief     set power control 2
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] sbclk is the sbclk div
- * @param[in] stp14ck is the stp14ck div
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] sbclk sbclk div
+ * @param[in] stp14ck stp14ck div
  * @return    status code
  *            - 0 success
  *            - 1 set power control 2 failed
@@ -2955,10 +2955,10 @@ uint8_t st7789_set_power_control_2(st7789_handle_t *handle, st7789_sbclk_div_t s
 
 /**
  * @brief     set equalize time control
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] source_equalize_time is the source equalize time
- * @param[in] source_pre_drive_time is the source pre drive time
- * @param[in] gate_equalize_time is the gate equalize time
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] source_equalize_time source equalize time
+ * @param[in] source_pre_drive_time source pre drive time
+ * @param[in] gate_equalize_time gate equalize time
  * @return    status code
  *            - 0 success
  *            - 1 set equalize time control failed
@@ -3024,7 +3024,7 @@ uint8_t st7789_set_equalize_time_control(st7789_handle_t *handle,
 
 /**
  * @brief     set program mode control
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set program mode control failed
@@ -3064,8 +3064,8 @@ uint8_t st7789_set_program_mode_control(st7789_handle_t *handle)
 
 /**
  * @brief     enable or disable program mode
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set program mode enable failed
@@ -3108,9 +3108,9 @@ uint8_t st7789_set_program_mode_enable(st7789_handle_t *handle, st7789_bool_t en
 
 /**
  * @brief     set nvm setting
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] addr is the nvm address
- * @param[in] data is the nvm set data
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] addr nvm address
+ * @param[in] data nvm set data
  * @return    status code
  *            - 0 success
  *            - 1 set nvm setting failed
@@ -3151,7 +3151,7 @@ uint8_t st7789_set_nvm_setting(st7789_handle_t *handle, uint8_t addr, uint8_t da
 
 /**
  * @brief     set program action
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 set program action failed
@@ -3192,7 +3192,7 @@ uint8_t st7789_set_program_action(st7789_handle_t *handle)
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi initialization failed
@@ -3318,7 +3318,7 @@ uint8_t st7789_init(st7789_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 spi deinit failed
@@ -3371,8 +3371,8 @@ uint8_t st7789_deinit(st7789_handle_t *handle)
 
 /**
  * @brief     set column
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] column is the screen column
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] column screen column
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -3404,8 +3404,8 @@ uint8_t st7789_set_column(st7789_handle_t *handle, uint16_t column)
 
 /**
  * @brief     set row
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] row is the screen row
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] row screen row
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -3437,7 +3437,7 @@ uint8_t st7789_set_row(st7789_handle_t *handle, uint16_t row)
 
 /**
  * @brief     clear the display
- * @param[in] *handle points to an st7789 handle structure
+ * @param[in] *handle pointer to an st7789 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 clear failed
@@ -3592,12 +3592,12 @@ uint8_t st7789_clear(st7789_handle_t *handle)
 
 /**
  * @brief     fill the rect
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] left is the left coordinate x
- * @param[in] top is the top coordinate y
- * @param[in] right is the right coordinate x
- * @param[in] bottom is the bottom coordinate y
- * @param[in] color is the display color
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] left left coordinate x
+ * @param[in] top top coordinate y
+ * @param[in] right right coordinate x
+ * @param[in] bottom bottom coordinate y
+ * @param[in] color display color
  * @return    status code
  *            - 0 success
  *            - 1 fill rect failed
@@ -3814,12 +3814,12 @@ uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, u
 
 /**
  * @brief     draw a picture
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] left is the left coordinate x
- * @param[in] top is the top coordinate y
- * @param[in] right is the right coordinate x
- * @param[in] bottom is the bottom coordinate y
- * @param[in] *image points to an image buffer
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] left left coordinate x
+ * @param[in] top top coordinate y
+ * @param[in] right right coordinate x
+ * @param[in] bottom bottom coordinate y
+ * @param[in] *image pointer to an image buffer
  * @return    status code
  *            - 0 success
  *            - 1 draw picture 12bits failed
@@ -3995,12 +3995,12 @@ uint8_t st7789_draw_picture_12bits(st7789_handle_t *handle, uint16_t left, uint1
 
 /**
  * @brief     draw a picture
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] left is the left coordinate x
- * @param[in] top is the top coordinate y
- * @param[in] right is the right coordinate x
- * @param[in] bottom is the bottom coordinate y
- * @param[in] *image points to an image buffer
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] left left coordinate x
+ * @param[in] top top coordinate y
+ * @param[in] right right coordinate x
+ * @param[in] bottom bottom coordinate y
+ * @param[in] *image pointer to an image buffer
  * @return    status code
  *            - 0 success
  *            - 1 draw picture 16bits failed
@@ -4168,12 +4168,12 @@ uint8_t st7789_draw_picture_16bits(st7789_handle_t *handle, uint16_t left, uint1
 
 /**
  * @brief     draw a picture
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] left is the left coordinate x
- * @param[in] top is the top coordinate y
- * @param[in] right is the right coordinate x
- * @param[in] bottom is the bottom coordinate y
- * @param[in] *image points to an image buffer
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] left left coordinate x
+ * @param[in] top top coordinate y
+ * @param[in] right right coordinate x
+ * @param[in] bottom bottom coordinate y
+ * @param[in] *image pointer to an image buffer
  * @return    status code
  *            - 0 success
  *            - 1 draw picture 18bits failed
@@ -4343,10 +4343,10 @@ uint8_t st7789_draw_picture_18bits(st7789_handle_t *handle, uint16_t left, uint1
 
 /**
  * @brief     draw a point in the display
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] x is the coordinate x
- * @param[in] y is the coordinate y
- * @param[in] color is the point color
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] x coordinate x
+ * @param[in] y coordinate y
+ * @param[in] color point color
  * @return    status code
  *            - 0 success
  *            - 1 draw point failed
@@ -4447,12 +4447,12 @@ static uint8_t a_st7789_draw_point(st7789_handle_t *handle, uint16_t x, uint16_t
 
 /**
  * @brief     draw a char in the display
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] x is the coordinate x
- * @param[in] y is the coordinate y
- * @param[in] chr is the display char
- * @param[in] size is the display size
- * @param[in] color is the display color
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] x coordinate x
+ * @param[in] y coordinate y
+ * @param[in] chr display char
+ * @param[in] size display size
+ * @param[in] color display color
  * @return    status code
  *            - 0 success
  *            - 1 show char failed
@@ -4509,13 +4509,13 @@ static uint8_t a_st7789_show_char(st7789_handle_t *handle, uint16_t x, uint16_t 
 
 /**
  * @brief     write a string in the display
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] x is the coordinate x
- * @param[in] y is the coordinate y
- * @param[in] *str points to a write string address
- * @param[in] len is the length of the string
- * @param[in] color is the display color
- * @param[in] font is the string font
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] x coordinate x
+ * @param[in] y coordinate y
+ * @param[in] *str pointer to a write string address
+ * @param[in] len length of the string
+ * @param[in] color display color
+ * @param[in] font string font
  * @return    status code
  *            - 0 success
  *            - 1 draw point failed
@@ -4566,10 +4566,10 @@ uint8_t st7789_write_string(st7789_handle_t *handle, uint16_t x, uint16_t y, cha
 
 /**
  * @brief     draw a point in the display
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] x is the coordinate x
- * @param[in] y is the coordinate y
- * @param[in] color is the point color
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] x coordinate x
+ * @param[in] y coordinate y
+ * @param[in] color point color
  * @return    status code
  *            - 0 success
  *            - 1 draw point failed
@@ -4607,8 +4607,8 @@ uint8_t st7789_draw_point(st7789_handle_t *handle, uint16_t x, uint16_t y, uint3
 
 /**
  * @brief     write the command
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] cmd is the send command
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] cmd sent command
  * @return    status code
  *            - 0 success
  *            - 1 write command failed
@@ -4632,8 +4632,8 @@ uint8_t st7789_write_cmd(st7789_handle_t *handle, uint8_t cmd)
 
 /**
  * @brief     write the data
- * @param[in] *handle points to an st7789 handle structure
- * @param[in] data is the send data
+ * @param[in] *handle pointer to an st7789 handle structure
+ * @param[in] data sent data
  * @return    status code
  *            - 0 success
  *            - 1 write data failed
@@ -4657,7 +4657,7 @@ uint8_t st7789_write_data(st7789_handle_t *handle, uint8_t data)
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an st7789 info structure
+ * @param[out] *info pointer to an st7789 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL

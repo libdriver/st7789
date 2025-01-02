@@ -1455,7 +1455,7 @@ Functions</h2></td></tr>
 <p>enable vap van signal output </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1507,9 +1507,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the gate line </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*l</td><td>points to a gate line buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*l</td><td>pointer to a gate line buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1560,9 +1560,9 @@ Functions</h2></td></tr>
 <p>convert the gate line to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>is the gate line </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">l</td><td>gate line </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1625,11 +1625,11 @@ Functions</h2></td></tr>
 <p>set cabc control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">led_on</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">led_pwm_init</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">led_pwm_fix</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">led_pwm_polarity</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">led_on</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">led_pwm_init</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">led_pwm_fix</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">led_pwm_polarity</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1675,8 +1675,8 @@ Functions</h2></td></tr>
 <p>enable or disable command 2 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1722,8 +1722,8 @@ Functions</h2></td></tr>
 <p>enable or disable digital gamma </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1769,8 +1769,8 @@ Functions</h2></td></tr>
 <p>set blue digital gamma look up table </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>points to a param buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>pointer to a param buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1816,8 +1816,8 @@ Functions</h2></td></tr>
 <p>set red digital gamma look up table </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>points to a param buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>pointer to a param buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1875,10 +1875,10 @@ Functions</h2></td></tr>
 <p>set equalize time control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">source_equalize_time</td><td>is the source equalize time </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">source_pre_drive_time</td><td>is the source pre drive time </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gate_equalize_time</td><td>is the gate equalize time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_equalize_time</td><td>source equalize time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source_pre_drive_time</td><td>source pre drive time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gate_equalize_time</td><td>gate equalize time </td></tr>
   </table>
   </dd>
 </dl>
@@ -1933,9 +1933,9 @@ Functions</h2></td></tr>
 <p>set frame rate </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">selection</td><td>is the inversion selection </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rate</td><td>is the frame rate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">selection</td><td>inversion selection </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rate</td><td>frame rate </td></tr>
   </table>
   </dd>
 </dl>
@@ -2011,13 +2011,13 @@ Functions</h2></td></tr>
 <p>set frame rate control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">separate_fr_control</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">div_control</td><td>is the frame rate divided control </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">idle_mode</td><td>is the inversion idle mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">idle_frame_rate</td><td>is the idle frame rate </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">partial_mode</td><td>is the inversion partial mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">partial_frame_rate</td><td>is the partial frame rate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">separate_fr_control</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">div_control</td><td>frame rate divided control </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">idle_mode</td><td>inversion idle mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">idle_frame_rate</td><td>idle frame rate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">partial_mode</td><td>inversion partial mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">partial_frame_rate</td><td>partial frame rate </td></tr>
   </table>
   </dd>
 </dl>
@@ -2083,11 +2083,11 @@ Functions</h2></td></tr>
 <p>set gate </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gate_line_number</td><td>is the gate line number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">first_scan_line_number</td><td>is the first scan line number </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the gate scan mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">direction</td><td>is the gate scan direction </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gate_line_number</td><td>gate line number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">first_scan_line_number</td><td>first scan line number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>gate scan mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">direction</td><td>gate scan direction </td></tr>
   </table>
   </dd>
 </dl>
@@ -2141,9 +2141,9 @@ Functions</h2></td></tr>
 <p>set gate control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vghs</td><td>is the vghs level </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vgls</td><td>is the vgls level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vghs</td><td>vghs level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vgls</td><td>vgls level </td></tr>
   </table>
   </dd>
 </dl>
@@ -2201,10 +2201,10 @@ Functions</h2></td></tr>
 <p>set gate on timing adjustment </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gate_on_timing_adjustment</td><td>is the gate on timing adjustment </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gate_off_timing_adjustment_rgb</td><td>is the gate off timing adjustment in rgb interface </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">gate_off_timing_adjustment</td><td>is the gate off timing adjustment </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gate_on_timing_adjustment</td><td>gate on timing adjustment </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gate_off_timing_adjustment_rgb</td><td>gate off timing adjustment in rgb interface </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gate_off_timing_adjustment</td><td>gate off timing adjustment </td></tr>
   </table>
   </dd>
 </dl>
@@ -2250,8 +2250,8 @@ Functions</h2></td></tr>
 <p>set id code setting </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2333,14 +2333,14 @@ Functions</h2></td></tr>
 <p>set lcm control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">xmy</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">xbgr</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">xinv</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">xmx</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">xmh</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">xmv</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">xgs</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xmy</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xbgr</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xinv</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xmx</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xmh</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xmv</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xgs</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2386,8 +2386,8 @@ Functions</h2></td></tr>
 <p>set negative voltage gamma control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>points to a param buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>pointer to a param buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2439,9 +2439,9 @@ Functions</h2></td></tr>
 <p>set nvm setting </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>is the nvm address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>is the nvm set data </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>nvm address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data</td><td>nvm set data </td></tr>
   </table>
   </dd>
 </dl>
@@ -2499,10 +2499,10 @@ Functions</h2></td></tr>
 <p>set partial mode control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>is the non-display source output level </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the non-display area scan mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frequency</td><td>is the non-display frame frequency </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>non-display source output level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>non-display area scan mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frequency</td><td>non-display frame frequency </td></tr>
   </table>
   </dd>
 </dl>
@@ -2584,14 +2584,14 @@ Functions</h2></td></tr>
 <p>set porch </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">back_porch_normal</td><td>is the back porch setting in normal mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">front_porch_normal</td><td>is the front porch setting in normal mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">separate_porch_enable</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">back_porch_idle</td><td>is the back porch setting in idle mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">front_porch_idle</td><td>is the front porch setting in idle mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">back_porch_partial</td><td>is the back porch setting in partial mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">front_porch_partial</td><td>is the front porch setting in partial mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">back_porch_normal</td><td>back porch setting in normal mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">front_porch_normal</td><td>front porch setting in normal mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">separate_porch_enable</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">back_porch_idle</td><td>back porch setting in idle mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">front_porch_idle</td><td>front porch setting in idle mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">back_porch_partial</td><td>back porch setting in partial mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">front_porch_partial</td><td>front porch setting in partial mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -2643,8 +2643,8 @@ Functions</h2></td></tr>
 <p>set positive voltage gamma control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>points to a param buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*param</td><td>pointer to a param buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2702,10 +2702,10 @@ Functions</h2></td></tr>
 <p>set power control 1 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">avdd</td><td>is the avdd param </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">avcl</td><td>is the avcl param </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vds</td><td>is the vds param </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">avdd</td><td>avdd param </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">avcl</td><td>avcl param </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vds</td><td>vds param </td></tr>
   </table>
   </dd>
 </dl>
@@ -2757,9 +2757,9 @@ Functions</h2></td></tr>
 <p>set power control 2 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">sbclk</td><td>is the sbclk div </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">stp14ck</td><td>is the stp14ck div </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sbclk</td><td>sbclk div </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stp14ck</td><td>stp14ck div </td></tr>
   </table>
   </dd>
 </dl>
@@ -2795,7 +2795,7 @@ Functions</h2></td></tr>
 <p>set program action </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2831,7 +2831,7 @@ Functions</h2></td></tr>
 <p>set program mode control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -2877,8 +2877,8 @@ Functions</h2></td></tr>
 <p>enable or disable program mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -2924,8 +2924,8 @@ Functions</h2></td></tr>
 <p>set pwm frequency </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frequency</td><td>is the pwm frequency </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frequency</td><td>pwm frequency </td></tr>
   </table>
   </dd>
 </dl>
@@ -3001,13 +3001,13 @@ Functions</h2></td></tr>
 <p>set ram control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ram_mode</td><td>is the ram mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">display_mode</td><td>is the display mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">frame_type</td><td>is the frame type </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">data_mode</td><td>is the data mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bus_width</td><td>is the bus width </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pixel_type</td><td>is the pixel type </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ram_mode</td><td>ram mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">display_mode</td><td>display mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">frame_type</td><td>frame type </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">data_mode</td><td>data mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">bus_width</td><td>bus width </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pixel_type</td><td>pixel type </td></tr>
   </table>
   </dd>
 </dl>
@@ -3095,15 +3095,15 @@ Functions</h2></td></tr>
 <p>set rgb interface control </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rgb_mode</td><td>is the rgb mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rgb_if_mode</td><td>is the rgb if enable mode </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vspl</td><td>is the vspl active level </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">hspl</td><td>is the hspl active level </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">dpl</td><td>is the dpl active level </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">epl</td><td>is the epl active level </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vbp</td><td>is the rgb interface vsync back porch setting </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">hbp</td><td>is the rgb interface hsync back porch setting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rgb_mode</td><td>rgb mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rgb_if_mode</td><td>rgb if enable mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vspl</td><td>vspl active level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hspl</td><td>hspl active level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dpl</td><td>dpl active level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">epl</td><td>epl active level </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vbp</td><td>rgb interface vsync back porch setting </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hbp</td><td>rgb interface hsync back porch setting </td></tr>
   </table>
   </dd>
 </dl>
@@ -3157,9 +3157,9 @@ Functions</h2></td></tr>
 <p>set spi2 enable </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">date_lane</td><td>is a bool value </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">command_table_2</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">date_lane</td><td>bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">command_table_2</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -3205,8 +3205,8 @@ Functions</h2></td></tr>
 <p>set vcoms </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vcoms</td><td>is the vcoms </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vcoms</td><td>set vcoms </td></tr>
   </table>
   </dd>
 </dl>
@@ -3253,8 +3253,8 @@ Functions</h2></td></tr>
 <p>set vcoms offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>is the vcoms offset </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>vcoms offset </td></tr>
   </table>
   </dd>
 </dl>
@@ -3301,8 +3301,8 @@ Functions</h2></td></tr>
 <p>set vdv </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vdv</td><td>is the set vdv </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vdv</td><td>set vdv </td></tr>
   </table>
   </dd>
 </dl>
@@ -3349,8 +3349,8 @@ Functions</h2></td></tr>
 <p>set vdv vrh from </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">from</td><td>is the vdv and vrh from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">from</td><td>vdv and vrh from </td></tr>
   </table>
   </dd>
 </dl>
@@ -3396,8 +3396,8 @@ Functions</h2></td></tr>
 <p>set vrhs </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">vrhs</td><td>is the set vrhs </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">vrhs</td><td>set vrhs </td></tr>
   </table>
   </dd>
 </dl>
@@ -3450,9 +3450,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the vcom </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*v</td><td>points to a vcom buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*v</td><td>pointer to a vcom buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3503,9 +3503,9 @@ Functions</h2></td></tr>
 <p>convert the vcom to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>is the vcom </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>vcom </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3556,9 +3556,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the vcoms offset </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*v</td><td>points to a vcoms offset buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*v</td><td>pointer to a vcoms offset buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3609,9 +3609,9 @@ Functions</h2></td></tr>
 <p>convert the vcoms offset to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>is the vcoms offset </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>vcoms offset </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3662,9 +3662,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the vdv </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*v</td><td>points to a vcom buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*v</td><td>pointer to a vcom buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3715,9 +3715,9 @@ Functions</h2></td></tr>
 <p>convert the vdv to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>is the vcom </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>vcom </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3768,9 +3768,9 @@ Functions</h2></td></tr>
 <p>convert the register raw data to the vrhs </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>is the register raw data </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*v</td><td>points to a vcom buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg</td><td>register raw data </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*v</td><td>pointer to a vcom buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -3821,9 +3821,9 @@ Functions</h2></td></tr>
 <p>convert the vrhs to the register raw data </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to an st7789 handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>is the vcom </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>points to a register raw buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to an st7789 handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">v</td><td>vcom </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*reg</td><td>pointer to a register raw buffer </td></tr>
   </table>
   </dd>
 </dl>

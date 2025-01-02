@@ -55,9 +55,9 @@ static int gs_conn_fd;                           /**< network handle */
 static struct sockaddr_in gs_server_addr;        /**< server address */
 
 /**
- * @brief     ssd1306 full function
- * @param[in] argc is arg numbers
- * @param[in] **argv is the arg address
+ * @brief     st7789 full function
+ * @param[in] argc arg numbers
+ * @param[in] **argv arg address
  * @return    status code
  *            - 0 success
  *            - 1 run failed
@@ -579,8 +579,8 @@ static uint8_t a_socket_init(void)
 
 /**
  * @brief     socket read
- * @param[in] *buf points to a buffer address
- * @param[in] len is the buffer length
+ * @param[in] *buf pointer to a buffer address
+ * @param[in] len buffer length
  * @return    status code
  *             - 0 success
  *             - 1 read failed
@@ -611,7 +611,7 @@ static uint16_t a_socket_read(uint8_t *buf, uint16_t len)
 
 /**
  * @brief     signal handler
- * @param[in] signum is the signal number
+ * @param[in] signum signal number
  * @note      none
  */
 static void a_sig_handler(int signum)
