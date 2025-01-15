@@ -3294,7 +3294,7 @@ uint8_t st7789_init(st7789_handle_t *handle)
 
         return 4;                                                               /* return error */
     }
-    handle->delay_ms(100);                                                      /* delay 100 ms */
+    handle->delay_ms(25);                                                       /* over 10 us */
     if (handle->reset_gpio_write(1) != 0)                                       /* write 1 */
     {
         handle->debug_print("st7789: reset gpio write failed.\n");              /* reset gpio write failed */
@@ -3303,7 +3303,7 @@ uint8_t st7789_init(st7789_handle_t *handle)
 
         return 4;                                                               /* return error */
     }
-    handle->delay_ms(100);                                                      /* delay 100 ms */
+    handle->delay_ms(125);                                                      /* over 120 ms */
     if (handle->spi_init() != 0)                                                /* spi init */
     {
         handle->debug_print("st7789: spi init failed.\n");                      /* spi init failed */
