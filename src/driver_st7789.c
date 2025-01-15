@@ -3303,6 +3303,7 @@ uint8_t st7789_init(st7789_handle_t *handle)
 
         return 4;                                                               /* return error */
     }
+    handle->delay_ms(100);                                                      /* delay 100 ms */
     if (handle->spi_init() != 0)                                                /* spi init */
     {
         handle->debug_print("st7789: spi init failed.\n");                      /* spi init failed */
