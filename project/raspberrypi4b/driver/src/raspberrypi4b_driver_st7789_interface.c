@@ -58,7 +58,7 @@ static int gs_fd;                           /**< spi handle */
  */
 uint8_t st7789_interface_spi_init(void)
 {
-    return spi_init(SPI_DEVICE_NAME, &gs_fd, SPI_MODE_TYPE_3, 1000 * 1000 * 8);
+    return spi_init(SPI_DEVICE_NAME, &gs_fd, SPI_MODE_TYPE_3, 1000 * 1000 * 5);
 }
 
 /**
