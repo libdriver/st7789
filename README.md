@@ -10,7 +10,7 @@
 
 The ST7789 is a single-chip controller/driver for 262K-color, graphic type TFT-LCD. It consists of 720 source line and 320 gate line driving circuits. This chip is capable of connecting directly to an external microprocessor, and accepts, 8-bits/9-bits/16-bits/18-bits parallel interface. Display data can be stored in the on-chip display data RAM of 240x320x18 bits. It can perform display data RAM read/write operation with no external operation clock to minimize power consumption. In addition, because of the integrated power supply circuit necessary to drive liquid crystal; it is possible to make a display system with the fewest components.
 
-LibDriver ST7789 is a full-featured driver of ST7789 launched by LibDriver.It provides the functions of drawing single point, filling block, image display, etc. LibDriver is MISRA compliant.
+LibDriver ST7789 is a full-featured driver for ST7789, launched by LibDriver.It provides single point drawing, block filling, image display and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
