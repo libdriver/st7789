@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buf_0',['buf',['../structst7789__handle__s.html#adc7a9c017240ac148ced0996fcad64b3',1,'st7789_handle_s']]]
+  ['advance_20driver_20function_0',['st7789 advance driver function',['../group__st7789__advance__driver.html',1,'']]]
 ];

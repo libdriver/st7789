@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "LibDriver ST7789", "index.html", [
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -38,7 +38,7 @@ var NAVTREE =
       [ "File List", "files.html", "files_dup" ],
       [ "Globals", "globals.html", [
         [ "All", "globals.html", "globals_dup" ],
-        [ "Functions", "globals_func.html", null ],
+        [ "Functions", "globals_func.html", "globals_func" ],
         [ "Typedefs", "globals_type.html", null ],
         [ "Enumerations", "globals_enum.html", null ],
         [ "Enumerator", "globals_eval.html", "globals_eval" ],
@@ -51,10 +51,10 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"group__st7789__advance__driver.html#gab9041481260ceb00495836f96f378d62",
-"group__st7789__advance__driver.html#gga761ca182783308e5a256ea18d7e969b2a43c4c0460774c93be3c2faddde79435b",
-"group__st7789__basic__driver.html#gaabd59b90e3fffeea66412e2697e1e3af"
+"group__st7789__advance__driver.html#gga663eb1f9c49b62e0a4c7430a6080bac2a3742d4aa4b4ac7462f29562b0770fac9",
+"group__st7789__example__driver.html#ga6855329eab1e0ed1fd768fff7e4e078f"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';
