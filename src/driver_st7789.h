@@ -224,9 +224,9 @@ typedef enum
 typedef enum
 {
     ST7789_PIXEL_TYPE_0 = 0x0,        /**< type0 */
-    ST7789_PIXEL_TYPE_1 = 0x0,        /**< type1 */
-    ST7789_PIXEL_TYPE_2 = 0x0,        /**< type2 */
-    ST7789_PIXEL_TYPE_3 = 0x0,        /**< type3 */
+    ST7789_PIXEL_TYPE_1 = 0x1,        /**< type1 */
+    ST7789_PIXEL_TYPE_2 = 0x2,        /**< type2 */
+    ST7789_PIXEL_TYPE_3 = 0x3,        /**< type3 */
 } st7789_pixel_type_t;
 
 /**
