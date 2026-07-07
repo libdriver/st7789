@@ -541,8 +541,8 @@ uint8_t st7789_display_on(st7789_handle_t *handle)
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
  *            - 4 address is invalid
- *            - 5 start_address >= end_address
- * @note      start_address <= 319 && end_address <= 319 && start_address >= start_address
+ *            - 5 start_address > end_address
+* @note       start_address <= 319 && end_address <= 319 && start_address <= end_address
  */
 uint8_t st7789_set_column_address(st7789_handle_t *handle, uint16_t start_address, uint16_t end_address)
 {
@@ -562,9 +562,9 @@ uint8_t st7789_set_column_address(st7789_handle_t *handle, uint16_t start_addres
 
         return 4;                                                              /* return error */
     }
-    if (start_address >= end_address)                                          /* check range */
+    if (start_address > end_address)                                           /* check range */
     {
-        handle->debug_print("st7789: start_address >= end_address.\n");        /* start_address >= end_address */
+        handle->debug_print("st7789: start_address > end_address.\n");         /* start_address > end_address */
 
         return 5;                                                              /* return error */
     }
@@ -600,8 +600,8 @@ uint8_t st7789_set_column_address(st7789_handle_t *handle, uint16_t start_addres
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
  *            - 4 address is invalid
- *            - 5 start_address >= end_address
- * @note      start_address <= 319 && end_address <= 319 && start_address >= start_address
+ *            - 5 start_address > end_address
+ * @note      start_address <= 319 && end_address <= 319 && start_address <= end_address
  */
 uint8_t st7789_set_row_address(st7789_handle_t *handle, uint16_t start_address, uint16_t end_address)
 {
@@ -621,9 +621,9 @@ uint8_t st7789_set_row_address(st7789_handle_t *handle, uint16_t start_address, 
 
         return 4;                                                              /* return error */
     }
-    if (start_address >= end_address)                                          /* check range */
+    if (start_address > end_address)                                           /* check range */
     {
-        handle->debug_print("st7789: start_address >= end_address.\n");        /* start_address >= end_address */
+        handle->debug_print("st7789: start_address > end_address.\n");         /* start_address > end_address */
 
         return 5;                                                              /* return error */
     }
@@ -3606,11 +3606,11 @@ uint8_t st7789_clear(st7789_handle_t *handle)
  *            - 3 handle is not initialized
  *            - 4 left is over column
  *            - 5 right is over column
- *            - 6 left >= right
+ *            - 6 left > right
  *            - 7 top is over row
  *            - 8 bottom is over row
- *            - 9 top >= bottom
- * @note      left <= column && right <= column && left < right && top <= row && bottom <= row && top < bottom
+ *            - 9 top > bottom
+ * @note      left <= column && right <= column && left <= right && top <= row && bottom <= row && top <= bottom
  */
 uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, uint16_t right, uint16_t bottom, uint32_t color)
 {
@@ -3639,9 +3639,9 @@ uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, u
 
         return 5;                                                                  /* return error */
     }
-    if (left >= right)                                                             /* check left and right */
+    if (left > right)                                                              /* check left and right */
     {
-        handle->debug_print("st7789: left >= right.\n");                           /* left >= right */
+        handle->debug_print("st7789: left > right.\n");                            /* left > right */
 
         return 6;                                                                  /* return error */
     }
@@ -3657,9 +3657,9 @@ uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, u
 
         return 8;                                                                  /* return error */
     }
-    if (top >= bottom)                                                             /* check top and bottom */
+    if (top > bottom)                                                              /* check top and bottom */
     {
-        handle->debug_print("st7789: top >= bottom.\n");                           /* top >= bottom */
+        handle->debug_print("st7789: top > bottom.\n");                            /* top > bottom */
 
         return 9;                                                                  /* return error */
     }
@@ -3828,11 +3828,11 @@ uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, u
  *            - 3 handle is not initialized
  *            - 4 left is over column
  *            - 5 right is over column
- *            - 6 left >= right
+ *            - 6 left > right
  *            - 7 top is over row
  *            - 8 bottom is over row
- *            - 9 top >= bottom
- * @note      left <= column && right <= column && left < right && top <= row && bottom <= row && top < bottom
+ *            - 9 top > bottom
+ * @note      left <= column && right <= column && left <= right && top <= row && bottom <= row && top <= bottom
  */
 uint8_t st7789_draw_picture_12bits(st7789_handle_t *handle, uint16_t left, uint16_t top, uint16_t right, uint16_t bottom, uint16_t *image)
 {
@@ -3863,9 +3863,9 @@ uint8_t st7789_draw_picture_12bits(st7789_handle_t *handle, uint16_t left, uint1
 
         return 5;                                                                  /* return error */
     }
-    if (left >= right)                                                             /* check left and right */
+    if (left > right)                                                              /* check left and right */
     {
-        handle->debug_print("st7789: left >= right.\n");                           /* left >= right */
+        handle->debug_print("st7789: left > right.\n");                            /* left > right */
 
         return 6;                                                                  /* return error */
     }
@@ -3881,9 +3881,9 @@ uint8_t st7789_draw_picture_12bits(st7789_handle_t *handle, uint16_t left, uint1
 
         return 8;                                                                  /* return error */
     }
-    if (top >= bottom)                                                             /* check top and bottom */
+    if (top > bottom)                                                              /* check top and bottom */
     {
-        handle->debug_print("st7789: top >= bottom.\n");                           /* top >= bottom */
+        handle->debug_print("st7789: top > bottom.\n");                            /* top > bottom */
 
         return 9;                                                                  /* return error */
     }
@@ -4009,11 +4009,11 @@ uint8_t st7789_draw_picture_12bits(st7789_handle_t *handle, uint16_t left, uint1
  *            - 3 handle is not initialized
  *            - 4 left is over column
  *            - 5 right is over column
- *            - 6 left >= right
+ *            - 6 left > right
  *            - 7 top is over row
  *            - 8 bottom is over row
- *            - 9 top >= bottom
- * @note      left <= column && right <= column && left < right && top <= row && bottom <= row && top < bottom
+ *            - 9 top > bottom
+ * @note      left <= column && right <= column && left <= right && top <= row && bottom <= row && top <= bottom
  */
 uint8_t st7789_draw_picture_16bits(st7789_handle_t *handle, uint16_t left, uint16_t top, uint16_t right, uint16_t bottom, uint16_t *image)
 {
@@ -4044,9 +4044,9 @@ uint8_t st7789_draw_picture_16bits(st7789_handle_t *handle, uint16_t left, uint1
 
         return 5;                                                                  /* return error */
     }
-    if (left >= right)                                                             /* check left and right */
+    if (left > right)                                                              /* check left and right */
     {
-        handle->debug_print("st7789: left >= right.\n");                           /* left >= right */
+        handle->debug_print("st7789: left > right.\n");                            /* left > right */
 
         return 6;                                                                  /* return error */
     }
@@ -4062,9 +4062,9 @@ uint8_t st7789_draw_picture_16bits(st7789_handle_t *handle, uint16_t left, uint1
 
         return 8;                                                                  /* return error */
     }
-    if (top >= bottom)                                                             /* check top and bottom */
+    if (top > bottom)                                                              /* check top and bottom */
     {
-        handle->debug_print("st7789: top >= bottom.\n");                           /* top >= bottom */
+        handle->debug_print("st7789: top > bottom.\n");                            /* top > bottom */
 
         return 9;                                                                  /* return error */
     }
@@ -4182,11 +4182,11 @@ uint8_t st7789_draw_picture_16bits(st7789_handle_t *handle, uint16_t left, uint1
  *            - 3 handle is not initialized
  *            - 4 left is over column
  *            - 5 right is over column
- *            - 6 left >= right
+ *            - 6 left > right
  *            - 7 top is over row
  *            - 8 bottom is over row
- *            - 9 top >= bottom
- * @note      left <= column && right <= column && left < right && top <= row && bottom <= row && top < bottom
+ *            - 9 top > bottom
+ * @note      left <= column && right <= column && left <= right && top <= row && bottom <= row && top <= bottom
  */
 uint8_t st7789_draw_picture_18bits(st7789_handle_t *handle, uint16_t left, uint16_t top, uint16_t right, uint16_t bottom, uint32_t *image)
 {
@@ -4217,9 +4217,9 @@ uint8_t st7789_draw_picture_18bits(st7789_handle_t *handle, uint16_t left, uint1
 
         return 5;                                                                  /* return error */
     }
-    if (left >= right)                                                             /* check left and right */
+    if (left > right)                                                              /* check left and right */
     {
-        handle->debug_print("st7789: left >= right.\n");                           /* left >= right */
+        handle->debug_print("st7789: left > right.\n");                            /* left > right */
 
         return 6;                                                                  /* return error */
     }
@@ -4235,9 +4235,9 @@ uint8_t st7789_draw_picture_18bits(st7789_handle_t *handle, uint16_t left, uint1
 
         return 8;                                                                  /* return error */
     }
-    if (top >= bottom)                                                             /* check top and bottom */
+    if (top > bottom)                                                              /* check top and bottom */
     {
-        handle->debug_print("st7789: top >= bottom.\n");                           /* top >= bottom */
+        handle->debug_print("st7789: top > bottom.\n");                            /* top > bottom */
 
         return 9;                                                                  /* return error */
     }
@@ -4537,7 +4537,7 @@ uint8_t st7789_write_string(st7789_handle_t *handle, uint16_t x, uint16_t y, cha
     }
     if((x >= handle->column) || (y >= handle->row))                          /* check x, y */
     {
-        handle->debug_print("ssd1351: x or y is invalid.\n");                /* x or y is invalid */
+        handle->debug_print("st7789: x or y is invalid.\n");                 /* x or y is invalid */
 
         return 4;                                                            /* return error */
     }
@@ -4592,13 +4592,13 @@ uint8_t st7789_draw_point(st7789_handle_t *handle, uint16_t x, uint16_t y, uint3
     }
     if (x >= handle->column)                                     /* check x */
     {
-        handle->debug_print("ssd1351: x is over column.\n");     /* x is over column */
+        handle->debug_print("st7789: x is over column.\n");      /* x is over column */
 
         return 4;                                                /* return error */
     }
     if (y >= handle->row)                                        /* check y */
     {
-        handle->debug_print("ssd1351: y is over row.\n");        /* y is over row */
+        handle->debug_print("st7789: y is over row.\n");         /* y is over row */
 
         return 5;                                                /* return error */
     }

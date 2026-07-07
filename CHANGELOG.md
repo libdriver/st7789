@@ -1,3 +1,9 @@
+## 1.0.10 (2026-07-08)
+
+## Bug Fixes
+
+- fix doc errors
+
 ## 1.0.9 (2025-10-26)
 
 ## Features
