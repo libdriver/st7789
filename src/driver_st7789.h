@@ -836,11 +836,11 @@ uint8_t st7789_write_string(st7789_handle_t *handle, uint16_t x, uint16_t y, cha
  *            - 3 handle is not initialized
  *            - 4 left is over column
  *            - 5 right is over column
- *            - 6 left >= right
+ *            - 6 left > right
  *            - 7 top is over row
  *            - 8 bottom is over row
- *            - 9 top >= bottom
- * @note      left <= column && right <= column && left < right && top <= row && bottom <= row && top < bottom
+ *            - 9 top > bottom
+ * @note      left <= column && right <= column && left <= right && top <= row && bottom <= row && top <= bottom
  */
 uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, uint16_t right, uint16_t bottom, uint32_t color);
 
@@ -859,11 +859,11 @@ uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, u
  *            - 3 handle is not initialized
  *            - 4 left is over column
  *            - 5 right is over column
- *            - 6 left >= right
+ *            - 6 left > right
  *            - 7 top is over row
  *            - 8 bottom is over row
- *            - 9 top >= bottom
- * @note      left <= column && right <= column && left < right && top <= row && bottom <= row && top < bottom
+ *            - 9 top > bottom
+ * @note      left <= column && right <= column && left <= right && top <= row && bottom <= row && top <= bottom
  */
 uint8_t st7789_draw_picture_12bits(st7789_handle_t *handle, uint16_t left, uint16_t top, uint16_t right, uint16_t bottom, uint16_t *image);
 
@@ -882,11 +882,11 @@ uint8_t st7789_draw_picture_12bits(st7789_handle_t *handle, uint16_t left, uint1
  *            - 3 handle is not initialized
  *            - 4 left is over column
  *            - 5 right is over column
- *            - 6 left >= right
+ *            - 6 left > right
  *            - 7 top is over row
  *            - 8 bottom is over row
- *            - 9 top >= bottom
- * @note      left <= column && right <= column && left < right && top <= row && bottom <= row && top < bottom
+ *            - 9 top > bottom
+ * @note      left <= column && right <= column && left <= right && top <= row && bottom <= row && top <= bottom
  */
 uint8_t st7789_draw_picture_16bits(st7789_handle_t *handle, uint16_t left, uint16_t top, uint16_t right, uint16_t bottom, uint16_t *image);
 
@@ -905,11 +905,11 @@ uint8_t st7789_draw_picture_16bits(st7789_handle_t *handle, uint16_t left, uint1
  *            - 3 handle is not initialized
  *            - 4 left is over column
  *            - 5 right is over column
- *            - 6 left >= right
+ *            - 6 left > right
  *            - 7 top is over row
  *            - 8 bottom is over row
- *            - 9 top >= bottom
- * @note      left <= column && right <= column && left < right && top <= row && bottom <= row && top < bottom
+ *            - 9 top > bottom
+ * @note      left <= column && right <= column && left <= right && top <= row && bottom <= row && top <= bottom
  */
 uint8_t st7789_draw_picture_18bits(st7789_handle_t *handle, uint16_t left, uint16_t top, uint16_t right, uint16_t bottom, uint32_t *image);
 
@@ -1057,8 +1057,8 @@ uint8_t st7789_display_on(st7789_handle_t *handle);
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
  *            - 4 address is invalid
- *            - 5 start_address >= end_address
- * @note      start_address <= 319 && end_address <= 319 && start_address >= start_address
+ *            - 5 start_address > end_address
+* @note       start_address <= 319 && end_address <= 319 && start_address <= end_address
  */
 uint8_t st7789_set_column_address(st7789_handle_t *handle, uint16_t start_address, uint16_t end_address);
 
@@ -1073,8 +1073,8 @@ uint8_t st7789_set_column_address(st7789_handle_t *handle, uint16_t start_addres
  *            - 2 handle is NULL
  *            - 3 handle is not initialized
  *            - 4 address is invalid
- *            - 5 start_address >= end_address
- * @note      start_address <= 319 && end_address <= 319 && start_address >= start_address
+ *            - 5 start_address > end_address
+ * @note      start_address <= 319 && end_address <= 319 && start_address <= end_address
  */
 uint8_t st7789_set_row_address(st7789_handle_t *handle, uint16_t start_address, uint16_t end_address);
 
