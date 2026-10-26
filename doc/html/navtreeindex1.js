@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"group__st7789__advance__driver.html#gga663eb1f9c49b62e0a4c7430a6080bac2a11df41a57e291773e72a6a060663318e":[0,0,2,27,0],
 "group__st7789__advance__driver.html#gga663eb1f9c49b62e0a4c7430a6080bac2a3742d4aa4b4ac7462f29562b0770fac9":[0,0,2,27,7],
 "group__st7789__advance__driver.html#gga663eb1f9c49b62e0a4c7430a6080bac2a499afe250acc1585a8c40df7977ade90":[0,0,2,27,3],
 "group__st7789__advance__driver.html#gga663eb1f9c49b62e0a4c7430a6080bac2a530debad495c2cd92e166d4fa633323c":[0,0,2,27,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "group__st7789__example__driver.html#ga5f97fcc45954d9f583582f56af19af95":[0,0,5,7],
 "group__st7789__example__driver.html#ga617b05ff7c69067b9dd32aba6e3043e3":[0,0,5,30],
 "group__st7789__example__driver.html#ga636eea3fced633f93b2471001f75356f":[0,0,5,92],
-"group__st7789__example__driver.html#ga63ddf24c02e1fd17eac597040342270e":[0,0,5,70],
-"group__st7789__example__driver.html#ga644c9e9940089ee71c2bdd5d77be2c80":[0,0,5,60]
+"group__st7789__example__driver.html#ga63ddf24c02e1fd17eac597040342270e":[0,0,5,70]
 };
