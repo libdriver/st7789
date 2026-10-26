@@ -4,6 +4,7 @@ var driver__st7789_8c =
     [ "DRIVER_VERSION", "driver__st7789_8c.html#ae578001fe043b4cca7a0edd801cfe9c4", null ],
     [ "MANUFACTURER_NAME", "driver__st7789_8c.html#aaa2b8f5b105c3019df0cb346f472e803", null ],
     [ "MAX_CURRENT", "driver__st7789_8c.html#a2989837a37d6d63b59c6dd541b785435", null ],
+    [ "ST7789_3BYTE_CHUNK", "driver__st7789_8c.html#a2a6b7e5a59b1a67b13784ca535716181", null ],
     [ "ST7789_CMD", "driver__st7789_8c.html#ace5d87b4d7ee028d6aae54ce7370c797", null ],
     [ "ST7789_CMD_CABCCTRL", "driver__st7789_8c.html#ae009bf6cb7d6c537cee7cafed2a84a0a", null ],
     [ "ST7789_CMD_CASET", "driver__st7789_8c.html#a61b7c649e2536c66d4240d2dc9f63eaa", null ],

@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"group__st7789__example__driver.html#ga644c9e9940089ee71c2bdd5d77be2c80":[0,0,5,60],
 "group__st7789__example__driver.html#ga6855329eab1e0ed1fd768fff7e4e078f":[0,0,5,59],
 "group__st7789__example__driver.html#ga68bf116c63d1e79216ac03fa963960f7":[0,0,5,45],
 "group__st7789__example__driver.html#ga6aeae19f9d57ea2236ae910f55a4759b":[0,0,5,38],

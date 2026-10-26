@@ -124,6 +124,11 @@
 #define ST7789_CMD_PROMACT         0xFE        /**< program action command */
 
 /**
+ * @brief chunk size for 3 bytes per pixel formats
+ */
+#define ST7789_3BYTE_CHUNK         (ST7789_BUFFER_SIZE / 3 * 3)     /**< 3 bytes aligned chunk size */
+
+/**
  * @brief     write one byte
  * @param[in] *handle pointer to an st7789 handle structure
  * @param[in] data written data
@@ -3507,9 +3512,9 @@ uint8_t st7789_clear(st7789_handle_t *handle)
     if ((handle->format & 0x03) == 0x03)                                           /* rgb444 */
     {
         memset(handle->buf, 0x00, sizeof(uint8_t) * ST7789_BUFFER_SIZE);           /* clear buffer */
-        m = ((uint32_t)(handle->row) * handle->column * 3 / 2) /
+        m = (((uint32_t)(handle->row) * handle->column * 3 + 1) / 2) /
              ST7789_BUFFER_SIZE;                                                   /* total times */
-        n = ((uint32_t)(handle->row) * handle->column * 3 / 2) %
+        n = (((uint32_t)(handle->row) * handle->column * 3 + 1) / 2) %
              ST7789_BUFFER_SIZE;                                                   /* the last */
         for (i = 0; i < m; i++)
         {
@@ -3707,7 +3712,7 @@ uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, u
 
     if ((handle->format & 0x03) == 0x03)                                           /* rgb444 */
     {
-        for (i = 0; i < ST7789_BUFFER_SIZE; i += 3)                                /* fill the buffer */
+        for (i = 0; i < ST7789_3BYTE_CHUNK; i += 3)                                /* fill the buffer */
         {
             handle->buf[i] = (((color >> 8) & 0xF) << 4) |
                              (((color >> 4) & 0xF) << 0);                          /* set the color */
@@ -3716,14 +3721,14 @@ uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, u
             handle->buf[i + 2] = (((color >> 4) & 0xF) << 4) |
                                  (((color >> 0) & 0xF) << 0);                      /* set the color */
         }
-        m = ((uint32_t)(right - left + 1) * (bottom - top + 1) * 3 / 2) /
-             ST7789_BUFFER_SIZE;                                                   /* total times */
-        n = ((uint32_t)(right - left + 1) * (bottom - top + 1) * 3 / 2) %
-             ST7789_BUFFER_SIZE;                                                   /* the last */
+        m = (((uint32_t)(right - left + 1) * (bottom - top + 1) * 3 + 1) / 2) /
+             ST7789_3BYTE_CHUNK;                                                   /* total times */
+        n = (((uint32_t)(right - left + 1) * (bottom - top + 1) * 3 + 1) / 2) %
+             ST7789_3BYTE_CHUNK;                                                   /* the last */
         for (i = 0; i < m; i++)
         {
             if (a_st7789_write_bytes(handle, handle->buf,
-                ST7789_BUFFER_SIZE, ST7789_DATA) != 0)                             /* write data */
+                ST7789_3BYTE_CHUNK, ST7789_DATA) != 0)                             /* write data */
             {
                 handle->debug_print("st7789: write data failed.\n");               /* write data failed */
 
@@ -3773,20 +3778,20 @@ uint8_t st7789_fill_rect(st7789_handle_t *handle, uint16_t left, uint16_t top, u
     }
     else if ((handle->format & 0x06) == 0x06)                                      /* rgb666 */
     {
-        for (i = 0; i < ST7789_BUFFER_SIZE; i += 3)                                /* fill the buffer */
+        for (i = 0; i < ST7789_3BYTE_CHUNK; i += 3)                                /* fill the buffer */
         {
             handle->buf[i] = ((color >> 12) & 0x3F) << 2;                          /* set the color */
             handle->buf[i + 1] = ((color >> 6) & 0x3F) << 2;                       /* set the color */
             handle->buf[i + 2] = ((color >> 0) & 0x3F) << 2;                       /* set the color */
         }
         m = (uint32_t)(right - left + 1) * (bottom - top + 1) * 3 /
-             ST7789_BUFFER_SIZE;                                                   /* total times */
+             ST7789_3BYTE_CHUNK;                                                   /* total times */
         n = ((uint32_t)(right - left + 1) * (bottom - top + 1) * 3) %
-             ST7789_BUFFER_SIZE;                                                   /* the last */
+             ST7789_3BYTE_CHUNK;                                                   /* the last */
         for (i = 0; i < m; i++)
         {
             if (a_st7789_write_bytes(handle, handle->buf,
-                ST7789_BUFFER_SIZE, ST7789_DATA) != 0)                             /* write data */
+                ST7789_3BYTE_CHUNK, ST7789_DATA) != 0)                             /* write data */
             {
                 handle->debug_print("st7789: write data failed.\n");               /* write data failed */
 
@@ -3933,30 +3938,33 @@ uint8_t st7789_draw_picture_12bits(st7789_handle_t *handle, uint16_t left, uint1
     {
         uint16_t r;
         uint16_t c;
-        uint16_t color;
+        uint16_t color1;
+        uint16_t color2;
+        uint32_t pairs;
 
         c = right - left + 1;                                                      /* column */
         r = bottom - top + 1;                                                      /* row */
         point = 0;                                                                 /* image point init 0 */
-        m = ((uint32_t)(right - left + 1) * (bottom - top + 1) * 3 / 2) /
-             ST7789_BUFFER_SIZE;                                                   /* total times */
-        n = ((uint32_t)(right - left + 1) * (bottom - top + 1) * 3 / 2) %
-             ST7789_BUFFER_SIZE;                                                   /* the last */
+
+        m = ((uint32_t)c * r) / 2730;                                              /* full chunks */
+        n = ((uint32_t)c * r) % 2730;                                              /* remaining pixels */
         for (i = 0; i < m; i++)
         {
-            for (j = 0; j < ST7789_BUFFER_SIZE; j += 3)                            /* fill the buffer */
+            for (j = 0; j < ST7789_3BYTE_CHUNK; j += 3)                            /* fill the buffer */
             {
-                color = image[(point % c) * r + (point / c)];                      /* set color */
-                handle->buf[i] = (((color >> 8) & 0xF) << 4) |
-                                 (((color >> 4) & 0xF) << 0);                      /* set the color */
-                handle->buf[i + 1] = (((color >> 0) & 0xF) << 4) |
-                                     (((color >> 8) & 0xF) << 0);                  /* set the color */
-                handle->buf[i + 2] = (((color >> 4) & 0xF) << 4) |
-                                     (((color >> 0) & 0xF) << 0);                  /* set the color */
+                color1 = image[(point % c) * r + (point / c)];                     /* set color1 */
                 point++;                                                           /* point++ */
+                color2 = image[(point % c) * r + (point / c)];                     /* set color2 */
+                point++;                                                           /* point++ */
+                handle->buf[j] = (((color1 >> 8) & 0xF) << 4) |
+                                 (((color1 >> 4) & 0xF) << 0);                     /* r1 g1 */
+                handle->buf[j + 1] = (((color1 >> 0) & 0xF) << 4) |
+                                     (((color2 >> 8) & 0xF) << 0);                 /* b1 r2 */
+                handle->buf[j + 2] = (((color2 >> 4) & 0xF) << 4) |
+                                     (((color2 >> 0) & 0xF) << 0);                 /* g2 b2 */
             }
             if (a_st7789_write_bytes(handle, handle->buf,
-                ST7789_BUFFER_SIZE, ST7789_DATA) != 0)                             /* write data */
+                ST7789_3BYTE_CHUNK, ST7789_DATA) != 0)                             /* write data */
             {
                 handle->debug_print("st7789: write data failed.\n");               /* write data failed */
 
@@ -3965,18 +3973,30 @@ uint8_t st7789_draw_picture_12bits(st7789_handle_t *handle, uint16_t left, uint1
         }
         if (n != 0)                                                                /* not end */
         {
-            for (j = 0; j < n; j += 3)                                             /* fill the buffer */
+            pairs = n / 2;                                                         /* complete pixel pairs */
+            for (j = 0; j < pairs * 3; j += 3)                                     /* fill the buffer */
             {
-                color = image[(point % c) * r + (point / c)];                      /* set color */
-                handle->buf[i] = (((color >> 8) & 0xF) << 4) |
-                                 (((color >> 4) & 0xF) << 0);                      /* set the color */
-                handle->buf[i + 1] = (((color >> 0) & 0xF) << 4) |
-                                     (((color >> 8) & 0xF) << 0);                  /* set the color */
-                handle->buf[i + 2] = (((color >> 4) & 0xF) << 4) |
-                                     (((color >> 0) & 0xF) << 0);                  /* set the color */
+                color1 = image[(point % c) * r + (point / c)];                     /* set color1 */
                 point++;                                                           /* point++ */
+                color2 = image[(point % c) * r + (point / c)];                     /* set color2 */
+                point++;                                                           /* point++ */
+                handle->buf[j] = (((color1 >> 8) & 0xF) << 4) |
+                                 (((color1 >> 4) & 0xF) << 0);                     /* r1 g1 */
+                handle->buf[j + 1] = (((color1 >> 0) & 0xF) << 4) |
+                                     (((color2 >> 8) & 0xF) << 0);                 /* b1 r2 */
+                handle->buf[j + 2] = (((color2 >> 4) & 0xF) << 4) |
+                                     (((color2 >> 0) & 0xF) << 0);                 /* g2 b2 */
             }
-            if (a_st7789_write_bytes(handle, handle->buf, n, ST7789_DATA) != 0)    /* write data */
+            if ((n & 1) != 0)                                                      /* odd last pixel */
+            {
+                color1 = image[(point % c) * r + (point / c)];                     /* set the last color */
+                point++;                                                           /* point++ */
+                handle->buf[pairs * 3] = (((color1 >> 8) & 0xF) << 4) |
+                                         (((color1 >> 4) & 0xF) << 0);             /* r g */
+                handle->buf[pairs * 3 + 1] = (((color1 >> 0) & 0xF) << 4);         /* b, low nibble 0 */
+            }
+            if (a_st7789_write_bytes(handle, handle->buf,
+                (uint16_t)(pairs * 3 + ((n & 1) ? 2 : 0)), ST7789_DATA) != 0)      /* write data */
             {
                 handle->debug_print("st7789: write data failed.\n");               /* write data failed */
 
@@ -4292,13 +4312,12 @@ uint8_t st7789_draw_picture_18bits(st7789_handle_t *handle, uint16_t left, uint1
         c = right - left + 1;                                                      /* column */
         r = bottom - top + 1;                                                      /* row */
         point = 0;                                                                 /* image point init 0 */
-        m = ((uint32_t)(right - left + 1) * (bottom - top + 1) * 3) /
-             ST7789_BUFFER_SIZE;                                                   /* total times */
-        n = ((uint32_t)(right - left + 1) * (bottom - top + 1) * 3) %
-             ST7789_BUFFER_SIZE;                                                   /* the last */
+
+        m = ((uint32_t)c * r) / 1365;                                              /* full chunks */
+        n = ((uint32_t)c * r) % 1365;                                              /* remaining pixels */
         for (i = 0; i < m; i++)
         {
-            for (j = 0; j < ST7789_BUFFER_SIZE; j += 3)                            /* fill the buffer */
+            for (j = 0; j < ST7789_3BYTE_CHUNK; j += 3)                            /* fill the buffer */
             {
                 color = image[(point % c) * r + (point / c)];                      /* set color */
                 handle->buf[j] = ((color >> 12) & 0x3F) << 2;                      /* set the color */
@@ -4307,7 +4326,7 @@ uint8_t st7789_draw_picture_18bits(st7789_handle_t *handle, uint16_t left, uint1
                 point++;                                                           /* point++ */
             }
             if (a_st7789_write_bytes(handle, handle->buf,
-                ST7789_BUFFER_SIZE, ST7789_DATA) != 0)                             /* write data */
+                ST7789_3BYTE_CHUNK, ST7789_DATA) != 0)                             /* write data */
             {
                 handle->debug_print("st7789: write data failed.\n");               /* write data failed */
 
@@ -4316,7 +4335,7 @@ uint8_t st7789_draw_picture_18bits(st7789_handle_t *handle, uint16_t left, uint1
         }
         if (n != 0)                                                                /* not end */
         {
-            for (j = 0; j < n; j += 3)                                             /* fill the buffer */
+            for (j = 0; j < n * 3; j += 3)                                         /* fill the buffer */
             {
                 color = image[(point % c) * r + (point / c)];                      /* set color */
                 handle->buf[j] = ((color >> 12) & 0x3F) << 2;                      /* set the color */
@@ -4324,7 +4343,8 @@ uint8_t st7789_draw_picture_18bits(st7789_handle_t *handle, uint16_t left, uint1
                 handle->buf[j + 2] = ((color >> 0) & 0x3F) << 2;                   /* set the color */
                 point++;                                                           /* point++ */
             }
-            if (a_st7789_write_bytes(handle, handle->buf, n, ST7789_DATA) != 0)    /* write data */
+            if (a_st7789_write_bytes(handle, handle->buf,
+                (uint16_t)(n * 3), ST7789_DATA) != 0)                              /* write data */
             {
                 handle->debug_print("st7789: write data failed.\n");               /* write data failed */
 
